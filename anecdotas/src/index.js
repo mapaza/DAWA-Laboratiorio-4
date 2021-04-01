@@ -30,9 +30,24 @@ const App = (props) => {
     //seleccionada con su nuevo valor.
     setVotos(nuevos_votos)
   }
+  //Funcion de retorno que permite encontrar el mayor voto 
+  //dentro del array votos y retorna el indice
+  const maxVotos = () => {
+		var max = -1 
+    var maximo_indice = -1
+		
+		for(let cont in votos) {
+			if (votos[cont] > max) {
+				maximo_indice = cont
+				max = votos[cont]
+			}
+		}
+		return maximo_indice
+	}
 
   return (
     <div>
+      <h1>Anecdota del dia</h1>
       {props.anecdotes[selected]}
       <br/>
       <br/>
@@ -43,6 +58,9 @@ const App = (props) => {
       <br/>
       <br/>
       <p>Has: {votos[selected]}</p>
+      <h1>Anecdota más votada</h1>
+      <p>{anecdotes[maxVotos()]}</p>
+      <p>Tiene {votos[maxVotos()]} votos </p>
     </div>
   )
 }
