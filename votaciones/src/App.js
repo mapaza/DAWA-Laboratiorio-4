@@ -42,6 +42,7 @@ var average = ((good*1)+(neutral*0)+(bad*-1))/(good+neutral+bad)
 
   return (
     <div>
+<<<<<<< HEAD
       <h2 class="text-3xl font-extrabold text-black dark:text-white sm:text-4xl">
         <span class="block">
                 Give Feedback
@@ -70,4 +71,22 @@ var average = ((good*1)+(neutral*0)+(bad*-1))/(good+neutral+bad)
     </div>
   );
 };
+=======
+      <h2>Give Feedback</h2>
+      <button onClick={handlerClickGood}>Good</button>
+      <button onClick={handlerClickNeutral}>Neutral</button>
+      <button onClick={handlerClickBad}>Bad</button>
+      <Statistics 
+				good={good} 
+				neutral= {neutral} 
+				bad= {bad} 
+				all= {good+neutral+bad}
+				average= {((good*1)+(neutral*0)+(bad*-1))/(good+neutral+bad)}
+				positive=  {(100*good)/(good+neutral+bad)} 
+			/>
+    </div>
+  );
+};
+
+>>>>>>> 78e781b65444b9210375fa6fdb4fa23b330883fb
 export default App;

@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+<<<<<<< HEAD
     "@craco/craco": "^6.1.1",
+=======
+>>>>>>> 78e781b65444b9210375fa6fdb4fa23b330883fb
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
@@ -13,9 +16,15 @@
     "web-vitals": "^1.1.1"
   },
   "scripts": {
+<<<<<<< HEAD
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
+=======
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+>>>>>>> 78e781b65444b9210375fa6fdb4fa23b330883fb
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -35,11 +44,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+<<<<<<< HEAD
   },
   "devDependencies": {
     "@tailwindcss/postcss7-compat": "^2.0.4",
     "autoprefixer": "^9.8.6",
     "postcss": "^7.0.35",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.4"
+=======
+>>>>>>> 78e781b65444b9210375fa6fdb4fa23b330883fb
   }
 }

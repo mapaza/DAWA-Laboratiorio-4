@@ -1,12 +1,16 @@
 import { StrictMode } from "react";
 import ReactDOM from "react-dom";
+<<<<<<< HEAD
 import './index.css';
+=======
+>>>>>>> 78e781b65444b9210375fa6fdb4fa23b330883fb
 
 import App from "./App";
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
   <StrictMode>
+<<<<<<< HEAD
     
 <div class="relative">
     <div class="h-screen w-full z-10 inset-0 overflow-y-auto">
@@ -28,6 +32,9 @@ ReactDOM.render(
     </div>
 </div>
 
+=======
+    <App />
+>>>>>>> 78e781b65444b9210375fa6fdb4fa23b330883fb
   </StrictMode>,
   rootElement
 );

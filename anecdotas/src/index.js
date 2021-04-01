@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
+<<<<<<< HEAD
 import './index.css';
+=======
+>>>>>>> 78e781b65444b9210375fa6fdb4fa23b330883fb
 
 const App = (props) => {
   //Estado indice seleccionado
