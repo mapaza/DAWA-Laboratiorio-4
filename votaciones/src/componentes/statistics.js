@@ -3,6 +3,13 @@ import ReactDOM from "react-dom";
 import "../styles.css";
 
 const Statistics = (props) => {
+    if ( props.good ===0) {
+		return (
+			<div>
+				<p><strong>No Feedback given </strong></p>
+			</div>
+		)
+	} else{
 	return (
 		<div>
 			<p>
@@ -25,6 +32,7 @@ const Statistics = (props) => {
             </p>
 		</div>
 	)
+    }
 };
 
 export default Statistics;
