@@ -3,10 +3,23 @@ import ReactDOM from 'react-dom'
 
 const App = (props) => {
   const [selected, setSelected] = useState(0)
+  //Verificar el largo del array
+  console.log(anecdotes.length)
+  
+  //Función anecdotaRandom(), permite obtener un número random y 
+  // y asigna el resultado a selected
+  const anecdotaRandom = () => {
+    var random=Math.floor(Math.random()*anecdotes.length)
+    console.log(random)
+    setSelected(random)
+  }
 
   return (
     <div>
       {props.anecdotes[selected]}
+      <br/>
+      <br/>
+      <button onClick={anecdotaRandom}>Next Anecdote</button>
     </div>
   )
 }
