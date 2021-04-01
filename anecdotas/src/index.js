@@ -2,7 +2,12 @@ import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
 
 const App = (props) => {
+  //Estado indice seleccionado
   const [selected, setSelected] = useState(0)
+  //Estado de los votos, se almacenan en un array de 6 valores que guarda
+  //los votos y se relaciona con anecdotes segun su indice o estado de selected
+  const [votos, setVotos] = useState([0,0,0,0,0,0])
+  
   //Verificar el largo del array
   console.log(anecdotes.length)
   
@@ -13,6 +18,18 @@ const App = (props) => {
     console.log(random)
     setSelected(random)
   }
+  //Función que permite manejar el click del boton de votar
+  // Y aumenta la cantidad de votos
+  const handlerClickVotos = () =>{
+    //Se aplica desectructuramiento y se crea una copia de los votos
+    var nuevos_votos = [...votos]
+    //Se aumenta la cantidad de votos en la posicion seleccionada (selected)
+    // en +1
+    nuevos_votos[selected] = nuevos_votos[selected]+1
+    //Se asigna el nuevo array indicando el valor en la posiicion
+    //seleccionada con su nuevo valor.
+    setVotos(nuevos_votos)
+  }
 
   return (
     <div>
@@ -20,6 +37,12 @@ const App = (props) => {
       <br/>
       <br/>
       <button onClick={anecdotaRandom}>Next Anecdote</button>
+      <br/>
+      <br/>
+      <button onClick={handlerClickVotos}>Vote</button>
+      <br/>
+      <br/>
+      <p>Has: {votos[selected]}</p>
     </div>
   )
 }
