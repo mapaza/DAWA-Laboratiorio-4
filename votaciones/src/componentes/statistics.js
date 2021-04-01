@@ -12,27 +12,25 @@ const Statistics = (props) => {
 	} else{
 	return (
 		<div>
-			<p>
-                <strong>Good:</strong> {props.good}
-            </p>
-			<p>
-                <strong>Neutral: </strong> {props.neutral}
-            </p>
-			<p>
-                <strong>Bad: </strong> {props.bad}
-            </p>
-			<p>
-                <strong>All: </strong> {props.all}
-            </p>
-			<p>
-                <strong>Average: </strong> {props.average}
-            </p>
-			<p>
-                <strong>Positive: </strong> {props.positive} %
-            </p>
+			<Statistic text='Good' value={props.good} />
+            <Statistic text='Neutral' value={props.neutral} />
+            <Statistic text='Bad' value={props.bad} />
+            <Statistic text='All' value={props.all} />
+            <Statistic text='Average' value={props.average} />
+            <Statistic text='Positive' value={props.positive} />
+
 		</div>
 	)
     }
 };
+const Statistic = (props) => {
+	return (
+		<div>
+			<p>
+                <strong>{props.text} :</strong> {props.value}
+            </p>
+		</div>
+	)
+    };
 
 export default Statistics;
